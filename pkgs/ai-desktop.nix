@@ -16,7 +16,9 @@ let
         installPhase = ''
           runHook preInstall
           mkdir -p unpacked "$out"
-          dpkg-deb -x "$src" unpacked
+          # Nix store packages cannot retain privileged ownership/mode bits.
+          dpkg-deb --fsys-tarfile "$src" | tar --extract \
+            --no-same-owner --no-same-permissions --directory unpacked
           cp -a unpacked/usr/. "$out/"
           runHook postInstall
         '';

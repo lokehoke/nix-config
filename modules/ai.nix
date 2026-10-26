@@ -29,7 +29,10 @@
       # Preserve the current user desktop launch flag, independently of vendor defaults.
       exec = "${aiDesktop.codex-desktop}/bin/chatgpt --disable-gpu-compositing %U";
       icon = "chatgpt";
-      categories = [ "Utility" "Development" ];
+      categories = [
+        "Utility"
+        "Development"
+      ];
       mimeType = builtins.fromJSON (builtins.readFile ../config/codex/desktop-mime-types.json);
       type = "Application";
       startupNotify = true;
