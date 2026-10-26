@@ -1,0 +1,17 @@
+[
+  {
+    "publisher": "openai",
+    "name": "chatgpt",
+    "version": "26.818.61809",
+    "arch": "linux-x64",
+    "url": "https://openai.gallery.vsassets.io/_apis/public/gallery/publisher/openai/extension/chatgpt/26.818.61809/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?targetPlatform=linux-x64",
+    "hash": "sha256-bJPa3PDERwKheNfU8JaLN2pS6kOg8EiElSqQfA+mQUU="
+  },
+  {
+    "publisher": "ms-vscode",
+    "name": "cpptools-themes",
+    "version": "2.0.0",
+    "url": "https://ms-vscode.gallery.vsassets.io/_apis/public/gallery/publisher/ms-vscode/extension/cpptools-themes/2.0.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage",
+    "hash": "sha256-YWA5UsA+cgvI66uB9d9smwghmsqf3vZPFNpSCK+DJxc="
+  }
+]

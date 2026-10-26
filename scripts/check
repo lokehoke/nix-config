@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.."
+python3 scripts/check-secrets.py
+nix flake check --no-build
+for profile in lokehoke lokehoke-minimal; do
+  nix eval --raw ".#homeConfigurations.\"$profile\".activationPackage.drvPath" >/dev/null
+done

@@ -1,0 +1,39 @@
+{
+  "note": "Private paths relative to HOME; list only, no contents. Close Claude, Codex and VS Code before a consistent encrypted backup. Restore to the same username/path before starting the applications.",
+  "include": [
+    ".codex",
+    ".claude",
+    ".claude.json",
+    ".claude.json.backup",
+    ".config/Codex",
+    ".config/Claude",
+    ".config/ChatGPT",
+    ".config/chatgpt",
+    ".config/Code/User",
+    ".local/share/claude",
+    ".local/share/keyrings",
+    ".agents",
+    ".vim/.netrwhist",
+    ".viminfo",
+    ".local/share/applications/chatgpt.desktop",
+    ".local/share/applications/com.anthropic.Claude.desktop"
+  ],
+  "exclude": [
+    ".codex/ipc",
+    ".codex/tmp",
+    ".codex/.tmp",
+    ".codex/thread-writer-locks",
+    ".claude/ide",
+    "**/SingletonLock",
+    "**/SingletonSocket",
+    "**/SingletonCookie",
+    "**/*.sock"
+  ],
+  "covers": [
+    "CLI/desktop preferences, hooks and MCP definitions",
+    "skills, rules, instructions and plugins",
+    "sessions, history, archived chats, generated files and SQLite databases including journals",
+    "authentication and OS keyrings (private; re-login may still be needed)"
+  ],
+  "never_publish": true
+}

@@ -1,0 +1,10 @@
+{
+  "workbench.startupEditor": "none",
+  "files.trimTrailingWhitespace": true,
+  "editor.renderFinalNewline": "on",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "bottom",
+  "claudeCode.preferredLocation": "panel",
+  "trailing-spaces.deleteModifiedLinesOnly": true,
+  "trailing-spaces.trimOnSave": true
+}

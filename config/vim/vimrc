@@ -1,0 +1,13 @@
+" No personal ~/.vimrc existed on the source laptop. Preserve its defaults
+" and explicitly load the six installed plugins through Nix packages.
+set nocompatible
+" Portable defaults from the source laptop's Debian system vimrc.
+set backspace=indent,eol,start
+set history=50
+set ruler
+set nomodeline
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+" With no personal vimrc, upstream defaults were sourced after Debian's file.
+runtime defaults.vim
+syntax on
+filetype plugin indent on
