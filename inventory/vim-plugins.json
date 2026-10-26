@@ -1,0 +1,38 @@
+[
+  {
+    "owner": "tpope",
+    "repo": "vim-eunuch",
+    "rev": "dbbbf853fc523d312f61b4bbdf2e13297645dcde",
+    "hash": "sha256-FCUVq2eNI8VLFBKfwGfa6dNFirskXFOgVpVdc37/k1M="
+  },
+  {
+    "owner": "tpope",
+    "repo": "vim-surround",
+    "rev": "f51a26d3710629d031806305b6c8727189cd1935",
+    "hash": "sha256-eQInOqX8P3e1Mv9Tw3tjxo5RB9SuT308QD62XobFGSs="
+  },
+  {
+    "owner": "chr4",
+    "repo": "nginx.vim",
+    "rev": "7b8e3ef48d8e60fe64bb1a85be52e66dd412c84d",
+    "hash": "sha256-/hvf+Lo8j1ZoW6QOO6LbJJrXG4aHAotM6j5/9kifwwI="
+  },
+  {
+    "owner": "flazz",
+    "repo": "vim-colorschemes",
+    "rev": "fd8f122cef604330c96a6a6e434682dbdfb878c9",
+    "hash": "sha256-JhBnyvuKqP0ddKTUi+oVrfBd4Af/pxW4Goe+DfjB6LE="
+  },
+  {
+    "owner": "raingo",
+    "repo": "vim-matlab",
+    "rev": "bf0d934f9028a1540641bc15a343f85fa1a6316f",
+    "hash": "sha256-fdGz1WzJBFXrzqH5SrsyBTeVFe/M6O3Zr1/Y8SMOt3Q="
+  },
+  {
+    "owner": "VundleVim",
+    "repo": "Vundle.vim",
+    "rev": "b255382d6242d7ea3877bf059d2934125e0c4d95",
+    "hash": "sha256-hufBZwTL3BT1S2iOOb1TXTW2/Vvp52i6afu5gRmddTo="
+  }
+]

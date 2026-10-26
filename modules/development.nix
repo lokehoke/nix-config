@@ -1,15 +1,41 @@
 { pkgs, ... }:
 {
-  programs.vim.enable = true;
   home.packages = with pkgs; [
     nodejs_22
-    python3
+    (python3.withPackages (
+      ps: with ps; [
+        pip
+        ipython
+        jupyterlab
+        notebook
+        ipykernel
+        flask
+        python-dotenv
+        jsonschema
+        json5
+        pygments
+        qrcode
+        pypng
+        pyserial
+        intelhex
+        numpy
+        pandas
+        openpyxl
+        xlsxwriter
+        pillow
+        pikepdf
+        beautifulsoup4
+        lxml
+        requests
+      ]
+    ))
     uv
+    pipx
     gcc
+    gdb
     gnumake
     cmake
     pkg-config
   ];
-  # Libraries, notebooks and Jupyter belong in project-specific devShells.
-  # Do not copy mutable NVM installations or Python site-packages into the store.
+  # Project-specific dependency versions can still be fixed in each project's devShell.
 }

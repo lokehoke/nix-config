@@ -21,10 +21,13 @@
         inherit system;
         config.allowUnfree = true;
       };
+      vimPlugins = import ./pkgs/vim-plugins.nix { inherit pkgs; };
+      aiDesktop = import ./pkgs/ai-desktop.nix { inherit pkgs; };
       mkHome =
         extraModules:
         home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
+          extraSpecialArgs = { inherit vimPlugins aiDesktop; };
           modules = [ ./home/lokehoke.nix ] ++ extraModules;
         };
     in
@@ -32,12 +35,15 @@
       homeConfigurations = {
         lokehoke = mkHome [ { my.desktop.enable = true; } ];
         lokehoke-minimal = mkHome [ ];
-        lokehoke-audio = mkHome [
-          {
-            my.desktop.enable = true;
-            my.audio.enable = true;
-          }
-        ];
+      };
+      packages.${system} = aiDesktop // {
+        vim-plugins = pkgs.linkFarm "migrated-vim-plugins" (
+          map (plugin: {
+            name = plugin.pname;
+            path = plugin;
+          }) vimPlugins
+        );
+        vim = self.homeConfigurations.lokehoke-minimal.config.programs.vim.package;
       };
       checks.${system}.minimal = self.homeConfigurations.lokehoke-minimal.activationPackage;
       apps.${system}.home-manager = {

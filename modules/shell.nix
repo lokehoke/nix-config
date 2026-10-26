@@ -16,13 +16,11 @@
       clea = "clear";
       sl = "ls";
       l = "ls -lah";
+      lol = "cd ~/__my/lol/";
       up = "sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y";
       cvm = "\"$HOME/scripts/ssh_vm.sh\"";
     };
     initContent = ''
-      if command -v skotty >/dev/null 2>&1; then
-        eval "$(skotty ssh env)"
-      fi
       # This file stays outside Git and the Nix store. Never interpolate its contents.
       if [[ -r "$HOME/.config/private/shell.zsh" ]]; then
         source "$HOME/.config/private/shell.zsh"

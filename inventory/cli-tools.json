@@ -1,0 +1,19 @@
+{
+  "links": "links2",
+  "tldr": "tealdeer",
+  "neofetch": "fastfetch + neofetch launcher",
+  "tesseract-ocr": "tesseract",
+  "gnutls-bin": "gnutls",
+  "libnss3-tools": "nssTools",
+  "gpg-agent": "gnupg",
+  "python3/pip/Jupyter/IPython/Flask/esptool/pyserial/QR/PNG/intelhex": "python3.withPackages + esptool",
+  "pipx": "pipx",
+  "protontricks": "protontricks",
+  "rclone": "rclone",
+  "node/npm/corepack": "nodejs_22",
+  "gcc/g++/make/cmake/pkg-config": "gcc/gdb/gnumake/cmake/pkg-config",
+  "gh": "gh",
+  "git/vim/tmux/zsh": "Home Manager modules",
+  "htop/f3/curl/wget/unzip/zip": "same-name nixpkgs packages",
+  "Skotty/ya/arc/infractl/TPM issuance CLI": "excluded by user: corporate tools"
+}
