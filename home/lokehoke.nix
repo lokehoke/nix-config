@@ -13,6 +13,8 @@
     ../modules/ai.nix
   ];
 
+  my.shell.autoTmux = true;
+
   home.username = "lokehoke";
   home.homeDirectory = "/home/lokehoke";
   # Compatibility baseline for this configuration, not the Ubuntu version.

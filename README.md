@@ -12,7 +12,7 @@
 | `lokehoke` | minimal + VS Code, браузеры, почта, мессенджеры, офис, графика, Obsidian |
 | `lokehoke-audio` | desktop + REAPER, Ardour, QjackCtl |
 
-`my.ai.enable = true;` дополнительно включает Codex CLI и Claude CLI. Авторизация остаётся вне репозитория. `my.shell.autoTmux = true;` включает автоматическое подключение к tmux; по умолчанию оно выключено, чтобы сначала проверить новый shell.
+`my.ai.enable = true;` дополнительно включает Codex CLI и Claude CLI. Авторизация остаётся вне репозитория. `my.shell.autoTmux = true;` включает автоматическое подключение к сессии tmux `home` в интерактивном терминале; эта настройка включена во всех профилях.
 
 Поддерживается `x86_64-linux`. Для другого имени пользователя, домашнего каталога или ARM нужно изменить `home/lokehoke.nix` и `system` в `flake.nix`. `home.stateVersion` — исходная версия совместимости Home Manager; при обновлениях её не повышают автоматически.
 
@@ -61,4 +61,4 @@ nix build .#homeConfigurations.lokehoke-minimal.activationPackage
 
 При добавлении файлов сначала `git add`, иначе Git-backed flake их не видит. `scripts/check-secrets.py` ищет несколько распространённых шаблонов; это вспомогательная проверка, а не гарантия отсутствия секретов. Обновление зависимостей — отдельный `nix flake update` с повторной проверкой и сборкой.
 
-Конфиг tmux взят с текущего ноутбука, основан на [gpakosz/.tmux](https://github.com/gpakosz/.tmux). Его исходная лицензия сохранена в `config/tmux/LICENSE.MIT`. Автообновление плагинов выключено для декларативной установки.
+Конфиг tmux взят с текущего ноутбука, основан на [gpakosz/.tmux](https://github.com/gpakosz/.tmux). Его исходная лицензия сохранена в `config/tmux/LICENSE.MIT`. Автообновление плагинов tmux включено при запуске и перезагрузке конфига.
