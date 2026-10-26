@@ -20,7 +20,7 @@
 
 ```sh
 export NIX_CONFIG='experimental-features = nix-command flakes'
-git clone <URL-этого-репозитория> ~/nix-config
+git clone https://github.com/lokehoke/nix-config.git ~/nix-config
 cd ~/nix-config
 ./scripts/check
 nix build .#homeConfigurations.lokehoke-minimal.activationPackage
