@@ -1304,6 +1304,21 @@
     ],
     "image/webp": [
       "org.gnome.eog.desktop"
+    ],
+    "text/html": [
+      "yandex-browser.desktop"
+    ],
+    "x-scheme-handler/http": [
+      "yandex-browser.desktop"
+    ],
+    "x-scheme-handler/https": [
+      "yandex-browser.desktop"
+    ],
+    "x-scheme-handler/about": [
+      "yandex-browser.desktop"
+    ],
+    "x-scheme-handler/unknown": [
+      "yandex-browser.desktop"
     ]
   },
   "associations": {
