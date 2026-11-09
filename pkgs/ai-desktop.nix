@@ -1,6 +1,19 @@
 { pkgs }:
 let
   sources = builtins.fromJSON (builtins.readFile ../inventory/ai-desktop-sources.json);
+  externalOpen = pkgs.writeShellScriptBin "xdg-open" ''
+    case "$1" in
+      http://*|https://*)
+        exec ${pkgs.glib}/bin/gdbus call --session \
+          --dest org.freedesktop.portal.Desktop \
+          --object-path /org/freedesktop/portal/desktop \
+          --method org.freedesktop.portal.OpenURI.OpenURI "" "$1" "{}"
+        ;;
+      *)
+        exec ${pkgs.xdg-utils}/bin/xdg-open "$@"
+        ;;
+    esac
+  '';
   mkDesktop =
     name: command: desktopFile:
     let
@@ -71,6 +84,9 @@ let
         p.libxrandr
         p.libxtst
       ];
+      profile = pkgs.lib.optionalString (name == "chatgpt") ''
+        export PATH="${externalOpen}/bin:$PATH"
+      '';
       runScript = "/usr/bin/${command}";
       extraInstallCommands = ''
         mkdir -p "$out/share/applications"

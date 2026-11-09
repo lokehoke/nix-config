@@ -1,3 +1,6 @@
 # Portable preferences from the current laptop. Private state is restored separately.
 model = "gpt-6.1-sol"
 model_reasoning_effort = "low"
+
+[desktop]
+open-link-in-target-preference = "external-browser"
